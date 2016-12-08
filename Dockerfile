@@ -1,4 +1,5 @@
 FROM alpine:3.4
+MAINTAINER LiuJia "jia.liu@maxent-inc.com"
 
 RUN apk --update add python py-setuptools py-pip && \
     pip install elasticsearch-curator==4.2.1 && \
@@ -7,4 +8,6 @@ RUN apk --update add python py-setuptools py-pip && \
 
 COPY action.yml /etc/curator/action.yml
 
-ENTRYPOINT ["/usr/bin/curator", "/etc/curator/action.yml"]
+COPY curator.yml /root/.curator/curator.yml
+
+CMD /usr/bin/curator /etc/curator/action.yml
