@@ -1,4 +1,4 @@
-# docker_curator
+# docker_elastic_curator
 Curator is a elasticsearch index management tool. This repo to be created for deleting index automatically after a duration.
 
 
