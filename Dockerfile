@@ -10,4 +10,6 @@ COPY action.yml /etc/curator/action.yml
 
 COPY curator.yml /root/.curator/curator.yml
 
-CMD /usr/bin/curator /etc/curator/action.yml
+COPY run.sh /run.sh
+
+CMD /run.sh
